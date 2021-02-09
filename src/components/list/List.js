@@ -1,21 +1,23 @@
 import React from 'react';
-import { useCharacters } from '../hooks/characterHook';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import ListItem from '../listItem/ListItem';
 
-export default function List() {
-  const [characters, loading] = useCharacters();
+function List({ characters }) {
+  const charactersList = characters.map((character) => (
+    <li key={character.id}>
+      <Link to={`/characters/${character.id}`}>
+        <ListItem image={character.image} name={character.name} />
+      </Link>
+    </li>
+  ));
 
-  return (
-    <>
-      <ul>
-        {characters.map((character) => {
-          <Link>
-            <ListItem name={character.name} image={character.image} />;
-          </Link>;
-        })}
-      </ul>
-    </>
-  );
+  return <ul data-testid="characters">{charactersList}</ul>;
 }
+
+List.propTypes = {
+  characters: PropTypes.object,
+};
+
+export default List;

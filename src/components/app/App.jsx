@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from '../header/Header';
-import List from '../list/List';
+import charactersPage from '../../containers/charactersPage';
 import DetailsPage from '../details/DetailsPage';
 
 export default function App() {
@@ -10,7 +10,7 @@ export default function App() {
     <Router>
       <Header />
       <Switch>
-        <Route exact path="/" component={List} />
+        <Route exact path="/" component={charactersPage} />
         <Route exact path="/detail/:id" component={DetailsPage} />
       </Switch>
     </Router>
