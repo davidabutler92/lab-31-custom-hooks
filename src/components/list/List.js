@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import ListItem from '../listItem/ListItem';
 
 function List({ characters }) {
-  console.log(characters, 'inside list page');
   const charactersList = characters.map((character) => (
     <li key={character.id}>
       <Link to={`/characters/${character.id}`}>

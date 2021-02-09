@@ -4,7 +4,6 @@ import { useCharacters } from '../components/hooks/characterHook';
 
 export default function charactersPage() {
   const { characters, loading } = useCharacters();
-  console.log(characters, loading, 'inside container');
-  if (loading) return <div>loading</div>;
+  if (loading) return <h1>loading</h1>;
   return <List characters={characters} />;
 }
