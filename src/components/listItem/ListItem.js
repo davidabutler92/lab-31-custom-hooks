@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 function ListItem({ name, image }) {
   return (
-    <li>
+    <>
       <img src={image} alt={name} />
       <h2>{name}</h2>
-    </li>
+    </>
   );
 }
 
