@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getCharacters } from '../services/RickMortyApi';
+import { getCharacters, findCharacterById } from '../services/RickMortyApi';
 
 export const useCharacters = () => {
   const [loading, setLoading] = useState(true);
@@ -15,5 +15,22 @@ export const useCharacters = () => {
   return {
     loading,
     characters,
+  };
+};
+
+export const useCharacterById = (id) => {
+  const [loading, setLoading] = useState(true);
+  const [character, setCharacter] = useState({});
+
+  useEffect(() => {
+    findCharacterById(id).then((character) => {
+      setCharacter(character);
+      setLoading(false);
+    });
+  }, [id]);
+
+  return {
+    loading,
+    character,
   };
 };

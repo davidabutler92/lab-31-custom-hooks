@@ -7,7 +7,7 @@ import ListItem from '../listItem/ListItem';
 function List({ characters }) {
   const charactersList = characters.map((character) => (
     <li key={character.id}>
-      <Link to={`/characters/${character.id}`}>
+      <Link to={`/detail/${character.id}`}>
         <ListItem image={character.image} name={character.name} />
       </Link>
     </li>

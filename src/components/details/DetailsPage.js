@@ -1,22 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function DetailsPage({ image, name, status, species }) {
+function DetailsPage({ character }) {
+  console.log(character, 'inside detail page');
   return (
     <div>
-      <img src={image} alt={name} />
-      <h1>name: {name}</h1>
-      <p>status: {status}</p>
-      <p>species: {species}</p>
+      <img src={character.image} alt={name} />
+      <h1>name: {character.name}</h1>
+      <p>status: {character.status}</p>
+      <p>species: {character.species}</p>
     </div>
   );
 }
 
 DetailsPage.propTypes = {
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
-  species: PropTypes.string.isRequired,
+  character: PropTypes.object,
 };
 
 export default DetailsPage;
