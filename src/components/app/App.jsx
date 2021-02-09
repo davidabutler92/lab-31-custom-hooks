@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Swtich } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from '../header/Header';
 import List from '../list/List';
@@ -9,10 +9,10 @@ export default function App() {
   return (
     <Router>
       <Header />
-      <Swtich>
+      <Switch>
         <Route exact path="/" component={List} />
         <Route exact path="/detail/:id" component={DetailsPage} />
-      </Swtich>
+      </Switch>
     </Router>
   );
 }
