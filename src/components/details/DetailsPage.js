@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function DetailsPage({ character }) {
-  console.log(character, 'inside detail page');
   return (
     <div>
-      <img src={character.image} alt={name} />
+      <img src={character.image} alt={character.name} />
       <h1>name: {character.name}</h1>
       <p>status: {character.status}</p>
       <p>species: {character.species}</p>
@@ -14,7 +13,12 @@ function DetailsPage({ character }) {
 }
 
 DetailsPage.propTypes = {
-  character: PropTypes.object,
+  character: PropTypes.shape({
+    image: PropTypes.string,
+    name: PropTypes.string,
+    status: PropTypes.string,
+    species: PropTypes.string,
+  }),
 };
 
 export default DetailsPage;

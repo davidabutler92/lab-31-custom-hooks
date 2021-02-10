@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailsPage component renders a list item 1`] = `
+<DocumentFragment>
+  <img
+    alt="some name"
+    src="some image"
+  />
+  <h2>
+    some name
+  </h2>
+</DocumentFragment>
+`;

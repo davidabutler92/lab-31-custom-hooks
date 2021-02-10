@@ -17,7 +17,12 @@ function List({ characters }) {
 }
 
 List.propTypes = {
-  characters: PropTypes.array,
+  characters: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      image: PropTypes.string,
+    })
+  ),
 };
 
 export default List;
