@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailsPage component renders a details of a single character 1`] = `
+<DocumentFragment>
+  <div>
+    <img
+      alt="some name"
+      src="some image"
+    />
+    <h1>
+      name: some name
+    </h1>
+    <p>
+      status: some status
+    </p>
+    <p>
+      species: some species
+    </p>
+  </div>
+</DocumentFragment>
+`;
