@@ -2,14 +2,17 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import Header from './Header';
 import { MemoryRouter } from 'react-router-dom';
+import AppProvider from '../AppProvider/AppProvider';
 
-describe('DetailsPage component', () => {
+describe('Header component', () => {
   afterEach(() => cleanup());
-  it('renders a details of a single character', () => {
+  it('renders the header', () => {
     const { asFragment } = render(
-      <MemoryRouter>
-        <Header />
-      </MemoryRouter>
+      <AppProvider>
+        <MemoryRouter>
+          <Header />
+        </MemoryRouter>
+      </AppProvider>
     );
     expect(asFragment()).toMatchSnapshot();
   });

@@ -1,16 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DetailsPage component renders a details of a single character 1`] = `
+exports[`Header component renders the header 1`] = `
 <DocumentFragment>
   <div
-    class="header"
+    style="background-color: white; color: black;"
   >
-    <a
-      class="link"
-      href="/"
+    <div
+      class="header"
     >
-      Home Page
-    </a>
+      <a
+        class="link"
+        href="/"
+      >
+        Home Page
+      </a>
+      <button>
+        Click
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
