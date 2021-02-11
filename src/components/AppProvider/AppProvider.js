@@ -1,12 +1,19 @@
 import React, { createContext, useState } from 'react';
+import styles from '../../theme';
 
 export const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-  const [themeMode, setThemeMode] = useState('light');
-  const value = { themeMode };
+  const [theme, setTheme] = useState('light');
 
-  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
+  const mode = styles[theme];
+  const value = { setTheme, theme };
+
+  return (
+    <AppContext.Provider value={value}>
+      <div style={mode}>{children}</div>
+    </AppContext.Provider>
+  );
 };
 
 export default AppProvider;
