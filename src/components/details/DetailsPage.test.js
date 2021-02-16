@@ -19,3 +19,5 @@ describe('DetailsPage component', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 });
+
+//some comment
